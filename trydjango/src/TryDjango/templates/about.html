@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>About</h1>
+<p>
+    Welcome to the about page.
+</p>
+
+<p>
+    {{ my_text}}, {{my_text2}} 
+    {{my_list}}]
+    lll
+</p>    
+    
+<ul>
+    {% for my_sub_item in my_list %}
+        <li>{{my_sub_item}}</li>
+    (% end for %)
+</ul>    
+
+
+{% endblock %}
