@@ -6,6 +6,7 @@ from django.db import models
 class Product(models.Model):
 	
 	title = models.CharField(max_length = 200)
-	description = models.TextField()
-	price = models.IntegerField()
-	summary = models.TextField(default = "You are cool")
+	description = models.TextField(blank = True, null = True)
+	price = models.DecimalField(decimal_places = 2, max_digits=10000)
+	summary = models.TextField(default = "This is a default summary")
+	featured = models.BooleanField()
