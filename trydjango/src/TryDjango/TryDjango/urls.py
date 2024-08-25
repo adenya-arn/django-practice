@@ -18,11 +18,23 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-urlpatterns = [
-    path('create/', include('products.urls')),
+from pages.views import home_view, contact_view, about_view
+
+
+"""urlpatterns = [
     path('product/', include('products.urls')),
     path('about/', include('pages.urls')),
     path('contact/', include("pages.urls")),
     path('home/', include("pages.urls")),
+    path('admin/', admin.site.urls),
+]"""
+
+
+urlpatterns = [
+    path('blog/', include('Blog.urls')),
+    path('products/', include('products.urls')),
+    path('', home_view, name='home'),
+    path('about/<int:id>/', about_view, name='product-detail'),
+    path('contact/', contact_view),
     path('admin/', admin.site.urls),
 ]
