@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #MyApps
     'rest_framework',
     'my_app.apps.MyAppConfig',
+    'sample_project.apps.SampleProjectConfig',
 ]
 
 MIDDLEWARE = [
